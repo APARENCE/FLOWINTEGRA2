@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "framework": null,
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm run build:vercel",
+  "outputDirectory": "artifacts/file-flow/dist/public",
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "/api/index" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
